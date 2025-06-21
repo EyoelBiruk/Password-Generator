@@ -1,4 +1,4 @@
-<!doctype html>
+<!Doctype html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -10,7 +10,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <!--page1 header-->
+  <header id="page1">
     <div class="flex md:justify-around justify-between ">
     <div class="text-[#B52525]">
       <h1 class="text-3xl font-bold p-6">Pass</h1>
@@ -24,13 +25,19 @@
     <div class="text-center md:mt-[200px] mt-[100px]">
       <div class="">
          <h1 class="text-4xl  md:text-6xl font-bold text-[#570F0F] leading-relaxed">Welcome to Pass</h1>
-         <p class="mt-6 text-lg md:text-3xl text-[#6E6B6B]">pass is a password generator. It Generates a secure and strong <br class="hiiden sm:inline"> password for you. if you want to create a password, <br class="hidden sm:inline"> click the button below.</p>
-        <button class="mt-8 bg-[#570F0F] text-white px-10 py-3 text-xl md:text-3xl rounded-lg cursor-pointer hover:bg-[#6d1818] transition">
+         <p  class="mt-6 text-lg md:text-3xl text-[#6E6B6B]">pass is a password generator. It Generates a secure and strong <br class="hiiden sm:inline"> password for you. if you want to create a password, <br class="hidden sm:inline"> click the button below.</p>
+        <button onclick="goToGenerator('page2')" class="mt-8 bg-[#570F0F] text-white px-10 py-3 text-xl md:text-3xl rounded-lg cursor-pointer hover:bg-[#6d1818] transition">
       Generate
     </button>
       </div>
     </div>
   </header>
+    <!--Page2 header-->
+ <search id="page2" hidden>
+
+</search>
+
   <script src="./script.js"></script>
+
 </body>
 </html>
