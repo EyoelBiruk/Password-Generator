@@ -34,7 +34,20 @@
   </header>
     <!--Page2 header-->
  <search id="page2" hidden>
-
+   <!--Sidbar menu-->
+    <div class="bg-[#570F0F] w-[300px] h-screen">
+      <div class="text-white">
+      <h1 class="text-3xl font-bold p-6">Pass</h1>
+    </div>
+    <div class="text-center text-white">
+      <h1 class="text-2xl font-bold mt-5">Password Length</h1>
+      <p class="text-[#D4D4D4]">Pick you want between  4 to 15</p>
+    </div>
+    <div class="flex">
+      <input  type="range" id="passwordLength" min="4" max="15" value="8" class="w-[200px] h-2 bg-[#D4D4D4] rounded-lg appearance-none cursor-pointer mt-5 ml-5" ">
+      <h3 class="text-white p-2 text-2xl" id="lengthValue"></h3>
+    </div>
+    </div>
 </search>
 
   <script src="./script.js"></script>

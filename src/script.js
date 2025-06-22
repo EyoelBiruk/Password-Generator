@@ -61,3 +61,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
   showPage(initialPage);
 });
+// Add password length input listener
+ const slider = document.getElementById('passwordLength');
+ const lengthDisplay = document.getElementById('lengthValue');
+ function updateSlider() {
+  const value = slider.value;
+  const percentage = (value - slider.min) / (slider.max - slider.min) * 100;
+  slider.style.background = `linear-gradient(to right, #4caf50 ${percentage}%,
+  #ddd ${percentage}%)`;
+  lengthDisplay.textContent = value;
+ }
+ updateSlider(); // Initial call to set the display
+ slider.addEventListener('input', updateSlider);
