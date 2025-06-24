@@ -35,7 +35,7 @@
     <!--Page2 header-->
  <search id="page2" hidden>
    <!--Sidbar menu-->
-    <div class="bg-[#570F0F] w-[300px] h-screen">
+    <div class="bg-[#570F0F] w-[300px] h-screen hidden md:block">
       <div class="text-white">
       <h1 class="text-3xl font-bold p-6">Pass</h1>
     </div>
@@ -47,7 +47,136 @@
       <input  type="range" id="passwordLength" min="4" max="15" value="8" class="w-[200px] h-2 bg-[#D4D4D4] rounded-lg appearance-none cursor-pointer mt-5 ml-5" ">
       <h3 class="text-white p-2 text-2xl" id="lengthValue"></h3>
     </div>
+    <!--Includes Numbers-->
+      <div class="text-center  border-[#00C3F9] border-1 p-3 mt-10">
+        <div class="text-white font-bold text-2xl">
+          <h1>Includes Numbers</h1>
+        </div>
+        <div class="flex justify-around mt-3">
+          <button class="text-white font-bold px-4 py-2 bg-[#393939] rounded cursor-pointer">Yes</button>
+          <button class="text-white font-bold px-4 py-2 bg-[#393939] rounded cursor-pointer">No</button>
+        </div>
+      </div>
+      <!--Includes Small Letters-->
+        <div class="text-center  border-[#00C3F9] border-1 p-3 mt-4">
+        <div class="text-white font-bold text-2xl">
+          <h1>Includes Numbers</h1>
+        </div>
+        <div class="flex justify-around mt-3">
+          <button class="text-white font-bold px-4 py-2 bg-[#393939] rounded cursor-pointer">Yes</button>
+          <button class="text-white font-bold px-4 py-2 bg-[#393939] rounded cursor-pointer">No</button>
+        </div>
+      </div>
+      <!--Includes Capital Letters-->
+        <div class="text-center  border-[#00C3F9] border-1 p-3 mt-4">
+        <div class="text-white font-bold text-2xl">
+          <h1>Includes Capital Letters</h1>
+        </div>
+        <div class="flex justify-around mt-3">
+          <button class="text-white font-bold px-4 py-2 bg-[#393939] rounded cursor-pointer">Yes</button>
+          <button class="text-white font-bold px-4 py-2 bg-[#393939] rounded cursor-pointer">No</button>
     </div>
+
+        </div>
+           <!--Includes Special Characters-->
+            <div class="text-center  border-[#00C3F9] border-1 p-3 mt-4">
+        <div class="text-white font-bold text-[20px]">
+          <h1>Includes Special Characters</h1>
+        </div>
+        <div class="flex justify-center gap-4">
+    <button class="w-8 h-8 bg-[#393939] rounded-md cursor-pointer mt-3"></button>
+    <button class="w-8 h-8 bg-[#393939] rounded-md cursor-pointer mt-3"></button>
+    <button class="w-8 h-8 bg-[#393939] rounded-md cursor-pointer mt-3"></button>
+    <button class="w-8 h-8 bg-[#393939] rounded-md cursor-pointer mt-3"></button>
+    <button class="w-8 h-8 bg-[#393939] rounded-md cursor-pointer mt-3"></button>
+    </div>
+
+        </div>
+    </div>
+
+    <!-- 📱 Mobile Layout -->
+      <div class="block md:hidden p-6">
+    <h1 class="text-4xl font-[cursive] text-[#8B0000]">Pass</h1>
+    <h2 class="text-2xl font-bold text-[#570F0F] mt-4 text-center">Generate your password</h2>
+     <div class="text-center">
+    <h3 class="text-xl font-bold text-[#570F0F] mt-6">Password Length</h3>
+    <p class="text-gray-500">Pick you want between 4 to 15</p>
+     </div>
+    <div class="flex justify-center">
+      <input
+      type="range"
+      id="mobilePasswordLength"
+      min="4"
+      max="15"
+      value="8"
+      class="w-[200px] h-2 bg-[#D4D4D4] rounded-lg appearance-none cursor-pointer mt-5 ml-5" ">
+      <h3 class="text-black p-2 text-2xl" id="mobileLengthValue"></h3>
+    </div>
+   <!-- Includes Numbers -->
+<div class="text-center p-3 mt-3">
+  <div class="flex items-center justify-between gap-4 mx-auto max-w-[320px]">
+    <h1 class="text-[#6C2D2D] font-bold text-sm sm:text-base md:text-lg lg:text-xl">
+      Includes Numbers
+    </h1>
+    <button id="phones" class="w-8 h-8 bg-[#393939] rounded-md cursor-pointer"></button>
+  </div>
+</div>
+
+<!-- Includes Small Letters -->
+<div class="text-center p-3 mt-3">
+  <div class="flex items-center justify-between gap-4 mx-auto max-w-[320px]">
+    <h1 class="text-[#6C2D2D] font-bold text-sm sm:text-base md:text-lg lg:text-xl">
+      Includes Small Letters
+    </h1>
+    <button id="phones" class="w-8 h-8 bg-[#393939] rounded-md cursor-pointer"></button>
+  </div>
+</div>
+
+<!-- Includes Capital Letters -->
+<div class="text-center p-3 mt-3">
+  <div class="flex items-center justify-between gap-4 mx-auto max-w-[320px]">
+    <h1 class="text-[#6C2D2D] font-bold text-sm sm:text-base md:text-lg lg:text-xl">
+      Includes Capital Letters
+    </h1>
+    <button id="phones" class="w-8 h-8 bg-[#393939] rounded-md cursor-pointer"></button>
+  </div>
+</div>
+
+<!-- Includes Special Characters -->
+<div class="text-center p-3 mt-3">
+  <div class="flex items-center justify-between gap-4 mx-auto max-w-[320px]">
+    <h1 class="text-[#6C2D2D] font-bold text-sm sm:text-base md:text-lg lg:text-xl">
+      Includes Special Characters
+    </h1>
+    <button id="phones" class="w-8 h-8 bg-[#393939] rounded-md cursor-pointer"></button>
+  </div>
+</div>
+
+<!--How money password you want -->
+  <div class="text-center p-3 mt-3">
+  <div class=" items-center justify-between gap-4 mx-auto max-w-[320px]">
+    <h1 class="text-[#6C2D2D] font-bold text-sm sm:text-base md:text-lg lg:text-xl">
+      How money password you want
+    </h1>
+    <div class="flex justify-center gap-4">
+    <button class="w-8 h-8 bg-[#393939] rounded-md cursor-pointer mt-3"></button>
+    <button class="w-8 h-8 bg-[#393939] rounded-md cursor-pointer mt-3"></button>
+    <button class="w-8 h-8 bg-[#393939] rounded-md cursor-pointer mt-3"></button>
+    <button class="w-8 h-8 bg-[#393939] rounded-md cursor-pointer mt-3"></button>
+    <button class="w-8 h-8 bg-[#393939] rounded-md cursor-pointer mt-3"></button>
+    </div>
+  </div>
+</div>
+
+<!--button Generate-->
+    <div class="text-center mt-6">
+      <button  class="bg-[#393939] text-white px-10 py-3 text-xl md:text-3xl rounded-lg cursor-pointer hover:bg-[#570F0F] transition">
+        Generate
+      </button>
+    </div>
+  </div>
+
+
 </search>
 
   <script src="./script.js"></script>

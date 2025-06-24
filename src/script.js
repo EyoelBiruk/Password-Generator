@@ -62,14 +62,56 @@ window.addEventListener('DOMContentLoaded', () => {
   showPage(initialPage);
 });
 // Add password length input listener
- const slider = document.getElementById('passwordLength');
- const lengthDisplay = document.getElementById('lengthValue');
- function updateSlider() {
-  const value = slider.value;
-  const percentage = (value - slider.min) / (slider.max - slider.min) * 100;
-  slider.style.background = `linear-gradient(to right, #4caf50 ${percentage}%,
-  #ddd ${percentage}%)`;
-  lengthDisplay.textContent = value;
- }
- updateSlider(); // Initial call to set the display
- slider.addEventListener('input', updateSlider);
+ function setupSlider(sliderId, displayId, activeColor = '#4caf50', inactiveColor = '#ddd') {
+    const slider = document.getElementById(sliderId);
+    const display = document.getElementById(displayId);
+
+    if (slider && display) {
+      function update() {
+        const value = slider.value;
+        const percentage = (value - slider.min) / (slider.max - slider.min) * 100;
+        slider.style.background = `linear-gradient(to right, ${activeColor} ${percentage}%, ${inactiveColor} ${percentage}%)`;
+        display.textContent = value;
+      }
+
+      update(); // set on load
+      slider.addEventListener('input', update);
+    }
+  }
+
+  setupSlider('passwordLength', 'lengthValue'); // for PC
+  setupSlider('mobilePasswordLength', 'mobileLengthValue'); // for mobile
+
+ // ✅ Handle all Yes/No button groups
+  const yesNoSections = document.querySelectorAll('.flex.justify-around');
+
+  yesNoSections.forEach(section => {
+    const buttons = section.querySelectorAll('button');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Reset both buttons in this section
+        buttons.forEach(btn => btn.style.backgroundColor = '#393939');
+        // Set clicked button red
+        button.style.backgroundColor = '#BD0000';
+      });
+    });
+  });
+
+   // Select only the toggle buttons for Numbers, Small, Capital, Special
+  const toggleOptionButtons = document.querySelectorAll('#phones ');
+
+  toggleOptionButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const isActive = button.style.backgroundColor === 'rgb(189, 0, 0)';
+      button.style.backgroundColor = isActive ? '#393939' : '#BD0000';
+    });
+  });
+   // Toggle "how many passwords" buttons
+  const countButtons = document.querySelectorAll('.flex.justify-center.gap-4 button');
+
+  countButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const isActive = button.style.backgroundColor === 'rgb(189, 0, 0)';
+      button.style.backgroundColor = isActive ? '#393939' : '#BD0000';
+    });
+  });
