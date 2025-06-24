@@ -36,7 +36,7 @@
  <search id="page2" hidden>
 
    <!--Sidbar menu-->
-   <div class="flex min-h-screen">
+   <div class="hidden md:flex min-h-screen">
   <div class="bg-[#570F0F] w-[300px] h-screen hidden md:block">
       <div class="text-white">
       <h1 class="text-3xl font-bold p-6">Pass</h1>
@@ -95,9 +95,15 @@
 
         </div>
 
+         <!--button Generate-->
+    <div class="text-center mt-6">
+      <button  class="bg-[#393939] text-white px-10 py-3 text-xl md:text-3xl rounded-lg cursor-pointer hover:bg-[#570F0F] transition">
+        Generate
+      </button>
+    </div>
     </div>
      <!-- ✅ Main Content (Center of Page) -->
-    <div class="flex-1 flex  justify-center bg-white p-4">
+    <div class="flex-1 flex justify-center bg-white p-4">
       <h1 class="text-[#570F0F] text-3xl font-bold text-center">Generate your password</h1>
     </div>
    </div>
